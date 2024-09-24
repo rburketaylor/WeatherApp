@@ -22,7 +22,7 @@ Welcome to the Blazor Weather App! This is a simple project designed to explore 
 
 - **Blazor**: For building interactive web UIs using C# instead of JavaScript.
 - **ASP.NET Core**: Backend framework for hosting the application.
-- **OpenWeatherMap API**: To fetch real-time weather data.
+- **Tomorrow.io API**: To fetch real-time weather data.
 - **HTML/CSS**: For structuring and styling the application.
 
 ## Installation
