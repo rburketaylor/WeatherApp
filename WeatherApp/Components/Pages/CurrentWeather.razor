@@ -1,0 +1,28 @@
+﻿@using static System.Net.WebRequestMethods
+@using static WeatherApp.Models.WeatherModels
+@code {
+    private WeatherInfo currentWeather;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var response = await Http.Get<WeatherInfo>("https://api.open-metro.com/current?key=YOUR_API_KEY");
+        currentWeather = response;
+    }
+}
+
+<MudCard>
+    <MudCardHeader>
+        <MudText Typo="Typo.h6">Current Weather</MudText>
+    </MudCardHeader>
+    <MudCardContent>
+        @if (currentWeather != null)
+        {
+            <MudText>@currentWeather.Description</MudText>
+            <MudText>Temperature: @currentWeather.Temperature °C</MudText>
+        }
+        else
+        {
+            <MudText>Loading...</MudText>
+        }
+    </MudCardContent>
+</MudCard>

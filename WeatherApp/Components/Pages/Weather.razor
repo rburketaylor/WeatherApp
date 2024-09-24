@@ -1,0 +1,16 @@
+﻿@page "/weather"
+@inject HttpClient Http
+
+<MudTabs>
+    <MudTab Label="Current Weather">
+        <CurrentWeather />
+    </MudTab>
+    <MudTab Label="3-Day Forecast">
+        <ThreeDayForecast />
+    </MudTab>
+    <MudTab Label="7-Day Forecast">
+        <SevenDayForecast />
+    </MudTab>
+</MudTabs>
+
+@code {}
